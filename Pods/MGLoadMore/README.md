@@ -1,2 +1,0 @@
-# MGLoadMore
-LoadMoreTableView, LoadMoreCollectionView
