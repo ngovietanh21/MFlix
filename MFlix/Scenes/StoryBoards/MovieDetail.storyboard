@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="EQk-KM-Twf">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="r7J-TU-kcZ" customClass="MovieDetailViewController" customModule="MFlix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L3n-Bd-neS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gs8-eu-iCg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="hVa-K0-lvY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="395"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="VHg-b6-dEO">
+                                            <rect key="frame" x="30" y="40" width="354" height="177"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="VHg-b6-dEO" secondAttribute="height" multiplier="50:25" id="hlg-ZW-dw1"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDS-s5-Bee">
+                                            <rect key="frame" x="30" y="237" width="354" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horror · Science Fiction · Action · Thriller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF7-iH-raQ">
+                                            <rect key="frame" x="30" y="272" width="354" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-Dk-oIy">
+                                            <rect key="frame" x="30" y="305" width="354" height="70"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="JDS-s5-Bee" firstAttribute="top" secondItem="VHg-b6-dEO" secondAttribute="bottom" constant="20" id="PRC-1F-6lk"/>
+                                        <constraint firstAttribute="trailing" secondItem="sF7-iH-raQ" secondAttribute="trailing" constant="30" id="Qch-UX-68T"/>
+                                        <constraint firstAttribute="bottom" secondItem="pzT-Dk-oIy" secondAttribute="bottom" constant="20" id="VVs-uL-coS"/>
+                                        <constraint firstItem="VHg-b6-dEO" firstAttribute="leading" secondItem="hVa-K0-lvY" secondAttribute="leading" constant="30" id="Var-IN-tkM"/>
+                                        <constraint firstItem="JDS-s5-Bee" firstAttribute="centerX" secondItem="hVa-K0-lvY" secondAttribute="centerX" id="X7d-mC-Cjj"/>
+                                        <constraint firstItem="sF7-iH-raQ" firstAttribute="top" secondItem="JDS-s5-Bee" secondAttribute="bottom" constant="5" id="Y2s-Ub-iEC"/>
+                                        <constraint firstAttribute="trailing" secondItem="JDS-s5-Bee" secondAttribute="trailing" constant="30" id="a9v-Pp-Y6w"/>
+                                        <constraint firstItem="JDS-s5-Bee" firstAttribute="leading" secondItem="hVa-K0-lvY" secondAttribute="leading" constant="30" id="bYl-8c-gvs"/>
+                                        <constraint firstAttribute="trailing" secondItem="VHg-b6-dEO" secondAttribute="trailing" constant="30" id="gTA-Ut-OCt"/>
+                                        <constraint firstItem="sF7-iH-raQ" firstAttribute="leading" secondItem="hVa-K0-lvY" secondAttribute="leading" constant="30" id="gkk-4c-OEP"/>
+                                        <constraint firstItem="pzT-Dk-oIy" firstAttribute="leading" secondItem="hVa-K0-lvY" secondAttribute="leading" constant="30" id="ldM-QO-Qpg"/>
+                                        <constraint firstAttribute="trailing" secondItem="pzT-Dk-oIy" secondAttribute="trailing" constant="30" id="mhz-2B-c6I"/>
+                                        <constraint firstItem="VHg-b6-dEO" firstAttribute="top" secondItem="hVa-K0-lvY" secondAttribute="top" constant="40" id="o5e-e7-SHn"/>
+                                        <constraint firstItem="pzT-Dk-oIy" firstAttribute="top" secondItem="sF7-iH-raQ" secondAttribute="bottom" constant="15" id="zBM-hx-c42"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rK2-74-r0P" firstAttribute="trailing" secondItem="Gs8-eu-iCg" secondAttribute="trailing" id="1Yg-iZ-Kym"/>
+                            <constraint firstItem="rK2-74-r0P" firstAttribute="bottom" secondItem="Gs8-eu-iCg" secondAttribute="bottom" id="HIc-0K-m1x"/>
+                            <constraint firstItem="Gs8-eu-iCg" firstAttribute="leading" secondItem="rK2-74-r0P" secondAttribute="leading" id="m74-hx-jsz"/>
+                            <constraint firstItem="Gs8-eu-iCg" firstAttribute="top" secondItem="rK2-74-r0P" secondAttribute="top" id="uxZ-Ek-laM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rK2-74-r0P"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="pzT-Dk-oIy" id="ij3-FL-XWm"/>
+                        <outlet property="genresLabel" destination="sF7-iH-raQ" id="GDm-md-F86"/>
+                        <outlet property="movieImageView" destination="VHg-b6-dEO" id="lQ2-g4-z5d"/>
+                        <outlet property="tableView" destination="Gs8-eu-iCg" id="Wxz-eY-V4p"/>
+                        <outlet property="titleLabel" destination="JDS-s5-Bee" id="FKi-Z6-84a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb6-At-2It" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.130434782608695" y="-9.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="movie_placeholder" width="860" height="386"/>
+    </resources>
+</document>

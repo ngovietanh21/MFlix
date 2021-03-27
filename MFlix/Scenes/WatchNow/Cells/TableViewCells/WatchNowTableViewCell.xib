@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="222" id="KGk-i7-Jjw" customClass="WatchNowTableViewCell" customModule="MFlix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="222"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="222"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamic Duos: Bonus Deals" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxu-JN-KLe">
+                        <rect key="frame" x="30" y="15" width="292" height="27"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmB-dM-SAA">
+                        <rect key="frame" x="371" y="15" width="47" height="30"/>
+                        <state key="normal" title="See All">
+                            <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="didSelectSeeAllButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wny-Tl-wIh"/>
+                        </connections>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-t3-dsM">
+                        <rect key="frame" x="30" y="57" width="408" height="150"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="lEN-kC-4uR"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DGB-Pm-jFR">
+                            <size key="itemSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jxu-JN-KLe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="0DF-rx-W2q"/>
+                    <constraint firstAttribute="trailing" secondItem="mmB-dM-SAA" secondAttribute="trailing" constant="20" id="7ZH-rg-zAu"/>
+                    <constraint firstItem="Pqx-t3-dsM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Lg6-NX-Cpz"/>
+                    <constraint firstAttribute="trailing" secondItem="Pqx-t3-dsM" secondAttribute="trailing" id="ZIk-wp-P5c"/>
+                    <constraint firstItem="Pqx-t3-dsM" firstAttribute="top" secondItem="Jxu-JN-KLe" secondAttribute="bottom" constant="15" id="c7x-pv-TPH"/>
+                    <constraint firstAttribute="bottom" secondItem="Pqx-t3-dsM" secondAttribute="bottom" constant="15" id="gav-01-Bo5"/>
+                    <constraint firstItem="Jxu-JN-KLe" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="2/3" id="luy-gC-203"/>
+                    <constraint firstItem="mmB-dM-SAA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="pNu-Av-HcJ"/>
+                    <constraint firstItem="Jxu-JN-KLe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="tPm-0F-nb1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="Pqx-t3-dsM" id="Ddh-JG-eW8"/>
+                <outlet property="seeAllButton" destination="mmB-dM-SAA" id="EIG-XM-c8x"/>
+                <outlet property="titleLabel" destination="Jxu-JN-KLe" id="XHi-lv-62G"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="226.33928571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

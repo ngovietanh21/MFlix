@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SeeAllCollectionViewCell" customModule="MFlix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="133"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="133"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Fh8-v8-ySk">
+                        <rect key="frame" x="0.0" y="0.0" width="196" height="97"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fh8-v8-ySk" secondAttribute="trailing" id="0jI-T5-0Xl"/>
+                <constraint firstItem="Fh8-v8-ySk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="I4d-Sf-c1z"/>
+                <constraint firstItem="Fh8-v8-ySk" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.73" id="oQj-BZ-UNO"/>
+                <constraint firstItem="Fh8-v8-ySk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uGA-ym-5oK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="196" height="133"/>
+            <connections>
+                <outlet property="movieImageView" destination="Fh8-v8-ySk" id="6rp-9L-RS9"/>
+            </connections>
+            <point key="canvasLocation" x="243.47826086956525" y="160.37946428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="movie_placeholder" width="860" height="386"/>
+    </resources>
+</document>
